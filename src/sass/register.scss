@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.top-bar {
+    width: 100%;
+    background-color: #00A0D8;
+    .header-pic {
+        width: 860px;
+        height: 86px;
+        margin: auto;
+        margin-bottom: 20px;
+        img {
+            width: 860px;
+            margin: 10px  auto;
+        }
+    }
+}
+.title-line {
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    .tit {
+        height: 56px;
+        line-height: 56px;
+        margin: 0 auto;
+        font-size: 38px;
+    }
+}
+.form {
+    width: 600px;
+    padding: 60px;
+    margin: auto;
+    .form-group {
+        padding: 20px 0;
+    }
+    .register-agree {
+        font-size: 12px;
+    }
+    .form-control-feedback {
+        top: 22px;
+    }
+    .toLogin {
+        text-decoration: none;
+        float: right;
+    }
+}

@@ -1,0 +1,106 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-26 23:28:12
+ * @LastEditTime: 2021-10-19 21:52:30
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \Java Webd:\apacheServer\Web\bilibili会员购\server\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 网站说明 -->
+    <meta name="description" content="bilibili会员购">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilibili会员购</title>
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="bilibili会员购漫展票务是二次元同好的漫展购票平台，这里有丰富的线下活动等你发现，还等什么快买票和小伙伴们面基say hi～">
+    <meta name="keywords" content="B站会员购，bilibili会员购，bilibili票务，bilibili购票，bilibili电商，b站票务">
+    <link rel="shortcut icon" href="http://activity.hdslb.com/zzjs/show/favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- 分页样式 -->
+    <link rel="stylesheet" href="./css/pagination.css">
+    <!-- iconfont 阿里 -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2868755_q6i01qghkob.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app" style="background-color: #F4F5F7;">
+        <header></header>
+        <div>
+            <div class="showhome_switch_container">
+                <div class="showhome_switch">
+                    <div class="showhome_switch_button showhome_switch_button--select">漫展演出</div>
+                    <div class="showhome_switch_button">B站周边</div>
+                </div>
+
+            </div>
+            <!-- 城市，类型，筛选 -->
+            <div class="selector-wrapper">
+                <div class="wrapper city-selector-wrapper">
+                    <div class="title">城市:</div>
+                    <div class="seletor-content">
+                        <ul class="city-list">
+                            <li class="first city-item active">全国</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper city-selector-wrapper">
+                    <div class="title">类型:</div>
+                    <div class="seletor-content">
+                        <ul class="city-list">
+                            <!-- <li class="first city-item active">北京</li>
+                            <li class="city-item">北京</li>
+                            <li class="city-item">北京</li>
+                            <li class="city-item">北京</li>
+                            <li class="city-item">北京</li>
+                            <li class="city-item">北京</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper city-selector-wrapper">
+                    <div class="title">城市:</div>
+                    <div class="seletor-content">
+                        <ul class="city-list">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="project-list-wrapper">
+                <div class="project-list">
+                </div>
+            </div>
+        </div>
+        <div class="whole-pagination-wrapper">
+            <!-- <div class="pagination-wrapper ">
+                <div class="iconfont icon-fanhui pagination-rigth"></div>
+
+                <div class="pagination">
+
+                    <span class="pageNum active">1</span><span class="pageNum">2</span><span
+                        class="pageNum">3</span><span class="pageNum">4</span> <span class="pageNum">...</span> <span
+                        class="pageNum">45</span></div>
+                <div class="iconfont icon-arrow-right pagination-left"></div>
+            </div> -->
+
+        </div>
+        <!-- 尾部 -->
+        <footer></footer>
+    </div>
+    <script src="./libs/jquery.min.js"></script>
+    <script>
+        $("header").load("html/header.html");
+        $("footer").load("html/footer.html");
+    </script>
+    <script src="./libs/jquery-paging.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

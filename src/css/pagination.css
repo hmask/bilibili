@@ -1,0 +1,27 @@
+.pagination-wrapper {
+  margin-bottom: 55px;
+  justify-content: center;
+  display: flex;
+}
+.pagination-wrapper .iconfont {
+  cursor: pointer;
+}
+.pagination-wrapper .pagination {
+  padding: 0 30px;
+}
+.pagination-wrapper .pagination .pageNum.active {
+  color: #f25d8e;
+  position: relative;
+}
+.pagination-wrapper .pagination .pageNum {
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
+  font-size: 12px;
+  color: #222;
+  letter-spacing: 0;
+  font-family: Arial-Black;
+  padding: 0 13px;
+}
+
+/*# sourceMappingURL=pagination.css.map */

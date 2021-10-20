@@ -1,0 +1,145 @@
+@import "normal.scss";
+
+.footer {
+    width: 100%;
+    color: #99a22a;
+    text-align: center;
+
+    .footer-wrap {
+        width: 1160px;
+        margin: 0 auto;
+        height: 222px;
+        background-color: #f4f5f7;
+        padding-bottom: 40px;
+
+        .border {
+            width: 980px;
+            height: 1px;
+            margin: 0 auto 30px;
+            border-top: 1px solid #e5e9ef;
+        }
+
+        .footer-cnt {
+            width: 1160px;
+
+            ul {
+                list-style: none;
+                margin: 0 auto;
+                float: left;
+                margin-bottom: 30px;
+
+                li {
+                    list-style: none;
+                    float: left;
+                    text-align: left;
+                    list-style: none;
+                    width: 360px;
+                    height: 124px;
+                    font-size: 14px;
+                    padding-right: 20px;
+
+                    &:first-child {
+                        border-left: 0;
+                        padding-left: 0 !important;
+                    }
+
+                    .tips {
+                        margin-bottom: 22px;
+                    }
+
+                    .cards {
+                        width: 120px;
+                        float: left;
+                        margin-bottom: 16px;
+
+                        a:hover {
+                            color: #00A1D6;
+                        }
+                    }
+
+                    .right {
+                        float: right;
+                    }
+
+                    .block {
+                        position: relative;
+                        width: 100%;
+
+                        .icon {
+                            position: relative;
+                            float: left;
+                            width: 82px;
+                            height: 80px;
+
+                            .pic {
+                                position: relative;
+                                float: left;
+                                margin-left: 11px;
+                                width: 60px;
+                                height: 60px;
+                                background: url("../images/icons.png") no-repeat -1024px -194px;
+                                ;
+                            }
+
+                            em {
+                                float: left;
+                                position: absolute;
+                                width: 82px;
+                                font-style: normal;
+                                line-height: 14px;
+                                bottom: 0;
+                                left: 0;
+                                text-align: center;
+                            }
+
+                            .weibo {
+                                @extend .pic;
+                                background: url("../images/icons.png") no-repeat -1024px -322px;
+                            }
+
+                            .weixin {
+                                @extend .pic;
+                                background: url("../images/icons.png") no-repeat -1024px -66px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .border {
+                @extend .border;
+            }
+
+            .partner {
+                height: 88px;
+                padding: 0;
+                margin: 0 auto;
+                text-align: left;
+
+                .block {
+                    float: left;
+                    height: 50px;
+                    width: 100px;
+                }
+                .partner-banner {
+                    background: url("../images/footpic.png") no-repeat;
+                    width: 100px;
+                    height: 80px;
+                }
+            }
+
+            .isShowDomain {
+                float: left;
+                width: 1060px;
+                font-size: 12px;
+                line-height: 28px;
+            }
+
+
+        }
+    }
+
+}
+
