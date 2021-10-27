@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-18 20:20:48
- * @LastEditTime: 2021-10-18 20:37:11
+ * @LastEditTime: 2021-10-26 15:49:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\html\header.html
@@ -15,17 +15,30 @@
         <div class="nav-header-mainsite">主站</div>
         <div class="nav-header-search-bar-wrapper">
             <input type="text" class="nav-header-search-bar" placeholder="活动，嘉宾，场馆">
-            <!-- <div pseudo="-webkit-input-placeholder" id="placeholder" style="display: block !important;">活动、嘉宾、场馆</div> -->
-            <div class="icon search-icon"></div>
+            <div class="icon search-icon" id="search-icon"></div>
+            <ul class="suggestion-list">
+                   
+            </ul>
         </div>
-        <div class="user-info">
+        <div class="user-info" style="display: none;">
             <a href="" class="user-center-link">
                 <div class="profile-img"></div>
             </a>
+            <div class="userDetails" style="display: none;">
+                <div class="userId"></div>
+                <div class="esc">退出登录</div>
+            </div>
+        </div>
+        <div class="logoin-and-register">
+            <div class="register">注册</div>
+            <div class="line"></div>
+            <div class="login">登录</div>
+
         </div>
         <div class="order-and-icon-wrapper">
             <div class="icon order-icon"></div>
             <div class="order-center">订单中心</div>
+           
         </div>
     </div>
 

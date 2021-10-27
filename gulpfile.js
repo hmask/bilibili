@@ -33,6 +33,10 @@ const paths = {
         src: 'src/libs/**/*.*',
         dest: 'dist/libs'
     },
+    server: {
+        src: 'src/server/**/*.*',
+        dest: 'dist/server'
+    },
     imgs: {
         src: 'src/images/**/*.*',
         dest: 'dist/images'
@@ -90,6 +94,14 @@ function copyLibs() {
 function cleanLibs() {
     return del([paths.libs.dest+'/**/*.*'])
 }
+function copyServer() {
+    return gulp.src(paths.server.src)
+    .pipe(gulp.dest(paths.server.dest))
+    .pipe(connect.reload())
+}
+function cleanServer() {
+    return del([paths.server.dest+'/**/*.*'])
+}
 function copyImgs() {
     return gulp.src(paths.imgs.src)
     .pipe(gulp.dest(paths.imgs.dest))
@@ -118,6 +130,10 @@ async function watch() {
         this.emit('end');
     })
     gulp.watch(paths.libs.src, gulp.series(cleanLibs, copyLibs)).on('error', function (error) {
+        console.log(error);
+        this.emit('end');
+    })
+    gulp.watch(paths.server.src, gulp.series(cleanServer, copyServer)).on('error', function (error) {
         console.log(error);
         this.emit('end');
     })
@@ -161,7 +177,7 @@ async function server() {
 //形成处理流程
 //gulp.series函数中的任务将按顺序依次执行
 //gulp.parallel函数中的任务将同时执行
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, buildScss, copyLibs, copyImgs, watch, server))
+const build = gulp.series(clean, gulp.parallel(html, styles, scripts, buildScss, copyLibs, copyServer, copyImgs, watch, server))
 
 
 //导出任务

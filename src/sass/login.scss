@@ -1,1 +1,58 @@
 @import "register.scss";
+.container {
+  
+    width: 980px;
+    height: 500px;
+    
+    margin: 0 auto;
+    margin-top: 40px;
+   
+    .left {
+        width: 50%;
+        float: left;
+        height: 300px;
+        border-right: 1px solid #ccc;
+        padding: 70px;
+        .logo-pic {
+            width: 300px;
+            height: 150px;
+            img {
+                width: 300px;
+                height: 150px;
+                background-size: 100%;
+
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        float: right;
+      
+        padding: 40px;
+        .a {
+            padding: 20px 0;
+            a {
+                text-decoration: none;
+            }
+        }
+        .remember {
+            font-size: 12px;
+            color:#717171;
+         
+        }
+        .span {
+            padding-left: 10px;
+            color:#bbb;
+            font-size: 12px;
+        }
+        .btn-tologin {
+            float: left;
+            width: 40%;
+
+        }
+        .btn-toregister {
+            float: right;
+            width: 40%;
+        }
+    }
+}
