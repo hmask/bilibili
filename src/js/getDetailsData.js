@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 19:28:23
- * @LastEditTime: 2021-10-26 22:02:17
+ * @LastEditTime: 2021-10-27 21:40:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\js\getDetailsData.js
@@ -99,30 +99,23 @@ define(["./jquery"], () => {
         $(".whole-details .right").append(template('goodsTmp', {
             data
         }))
-
-        //参展嘉宾
-        // let temp = `<% for(let i = 0; i < data.guests.length; i++) { %>
-        //     <div class="guest-item first">
-        //     <img src="<%= ${data.guests[i].guest_img} %>" alt="" id="guest-img">
-        //     <div class="name"><%= ${data.guests[i].name} %></div>
-        //     </div>
-        //     <% } %>`
-
-        // $(".guest-list").append(temp)
-
+        //嘉宾
+        $(".guest-list").append(template('guests', {
+            data
+        }))
 
         //图片详情
         $("#imgDetails").append(imgDetails);
-
-
-
     }
 
     function bindHtml() {
-        console.log("111")
+        
+        console.log($(".selectable-option.price"));
         //给选中的增加active类名
         $(".right").on("click", ".selectable-option", function () {
+            // $(this).css("style","").siblings().css("style","");
             $(this).addClass("active");
+
             $(this).siblings().removeClass("active");
         })
 
@@ -151,7 +144,7 @@ define(["./jquery"], () => {
                     countBox.innerHTML = count;
                 }
             }
-            
+              
             //立即提交
             if (target.className == "buy") {
                 let count = document.querySelector(".num").innerHTML - 0;
@@ -162,6 +155,26 @@ define(["./jquery"], () => {
                 let url = "../html/cart.html?id=" + id + "&priceId=" + priceId + "&count=" + count;
                 window.location.href = url;
             }
+        })
+        
+        $(".tabs-item").eq(0).click(function() {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            let containerHeight = $(".container").height();
+            window.scrollTo({
+                top:containerHeight,
+                behavior:"smooth"
+            })
+        }) 
+        $(".tabs-item").eq(1).click(function() {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            let containerHeight = $(".container").height() +$(".tabs").height() + $(".guest-list").height();
+            console.log( $(".guest-list").height())
+            window.scrollTo({
+                top:containerHeight,
+                behavior:"smooth"
+            })
         })
     }
 

@@ -226,7 +226,7 @@
 
 .details-content-wrapper .details-content .whole-guest-wrapper {
   width: 850px;
-  height: 150px;
+  
   padding: 20px 0;
   background-color: #fff;
   border-radius: 5px;
@@ -256,6 +256,7 @@
 
 .details-content-wrapper .details-content .whole-guest-wrapper .guest-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .details-content-wrapper .details-content .whole-guest-wrapper .guest-list .first {

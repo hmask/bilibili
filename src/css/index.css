@@ -457,6 +457,10 @@
 }
 
 /* swiper */
+.swiper-wrapper {
+  width: 1160px !important;
+  margin: 0 auto;
+}
 .swiper-wrapper .swiper-slide {
   width: 1160px;
   min-height: 180px;
@@ -467,8 +471,8 @@
   
   width: 1160px;
   min-height: 180px;
-  background-size: cover;
-
+  background-size: 100% 100%;
+  margin: auto;
 
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-10-19 17:38:46
- * @LastEditTime: 2021-10-26 22:02:49
+ * @LastEditTime: 2021-10-27 20:28:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\html\details.html
@@ -39,7 +39,6 @@
                 <div class="right">
                 </div>
             </div>
-
         </div>
         <div class="container tabs-wrapper">
             <div class="tabs">
@@ -56,7 +55,7 @@
                         <div class="title">参展嘉宾</div>
                     </div>
                     <div class="guest-list">
-                      
+
                     </div>
                 </div>
                 <div class="activity-info ">
@@ -100,7 +99,7 @@
     <script src="../libs/jquery.min.js"></script>
     <script src="../libs/template-web.js"></script>
     <script src="../js/require.js" data-main='../js/details'></script>
-     <script type="text/html" id="goodsTmp">
+    <script type="text/html" id="goodsTmp">
         <div class="product-info-name">
             <span>{{ data.name }}</span>
         </div>
@@ -117,15 +116,17 @@
             <div class="title">场次：</div>
             <div class="screens" style="overflow: hidden; max-width: 700px;">
                 {{each data.screen_list time}}
-                <p style="float: left;" class="selectable-option">{{time.name}}</p>
+                <p style="float: left;" class="selectable-option {{$index === 0 && 'active'}}">{{time.name}}</p>
                 {{/each}}
             </div>
         </div>
         <div class="product-info-session">
             <div class="title">价格：</div>
             <div class="screens">
+                
                 {{each data.screen_list[0].ticket_list price}}
-                <p class="selectable-option price" dataset={{price.id}}>￥{{price.price / 100}}({{price.desc}})</p>
+               
+                <p class="selectable-option price {{$index === 0 && 'active'}}" dataset={{price.id}}>￥{{price.price / 100}}({{price.desc}})</p>
                 {{/each}}
             </div>
         </div>
@@ -147,9 +148,16 @@
             </div>
         </div>
     </script>
-    <!-- <script>
-
-    </script> -->
+    <script type="text/html" id="guests">
+        {{each data.guests guests}}
+        <div class="guest-item first">
+            
+            <img src="{{guests.guest_img}}" alt="" id="guest-img">
+            <div class="name">{{guests.name}}</div>
+            
+        </div>
+        {{/each}}
+    </script>
 </body>
 
 </html>
