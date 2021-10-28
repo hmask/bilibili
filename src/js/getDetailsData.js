@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 19:28:23
- * @LastEditTime: 2021-10-27 21:40:18
+ * @LastEditTime: 2021-10-28 16:09:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\js\getDetailsData.js
