@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 19:28:23
- * @LastEditTime: 2021-10-28 16:09:39
+ * @LastEditTime: 2021-10-29 10:10:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\js\getDetailsData.js
@@ -160,7 +160,7 @@ define(["./jquery"], () => {
         $(".tabs-item").eq(0).click(function() {
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
-            let containerHeight = $(".container").height();
+            let containerHeight = $(".container").outerHeight(true) + $("header").outerHeight(true);
             window.scrollTo({
                 top:containerHeight,
                 behavior:"smooth"
@@ -169,13 +169,37 @@ define(["./jquery"], () => {
         $(".tabs-item").eq(1).click(function() {
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
-            let containerHeight = $(".container").height() +$(".tabs").height() + $(".guest-list").height();
-            console.log( $(".guest-list").height())
+            let containerHeight = $(".container").outerHeight(true) +$(".tabs-wrapper").outerHeight(true) + $(".guest-list").outerHeight(true)+ $("header").outerHeight(true);;
+            // console.log( $(".guest-list").height())
             window.scrollTo({
                 top:containerHeight,
                 behavior:"smooth"
             })
         })
+
+        //回到顶部
+      
+        var returnTop=document.querySelector('.backToTop');
+
+        window.onscroll=function(){
+            //获取浏览器卷去的高度
+            var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+            
+            //定义一个高度
+            if(scrollTop>=500){
+                
+                returnTop.style.display="block"
+            }else {
+                
+                returnTop.style.display="none";
+            }
+        }
+        returnTop.onclick=function(){
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            })
+        }
     }
 
 

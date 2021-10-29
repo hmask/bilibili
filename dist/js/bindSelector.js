@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 10:55:39
- * @LastEditTime: 2021-10-28 20:26:16
+ * @LastEditTime: 2021-10-28 22:13:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\js\bindList.js
@@ -96,11 +96,14 @@ define(['jquery'], () => {
     }
     //渲染分页
     function getPage(data) {
+    
         $(".whole-pagination-wrapper").html("");   
             $(".whole-pagination-wrapper").append(`
+
             <div class="pagination-wrapper ">
                 <div class="iconfont icon-fanhui pagination-right"></div>
                     <div class="pagination">
+                     
                         <span class="pageNum active">${data.page && data.page}</span>
                         <span class="pageNum">${data.page + 1}</span>
                         <span class="pageNum">${data.page + 2}</span>
