@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-21 14:49:18
- * @LastEditTime: 2021-10-27 21:45:11
+ * @LastEditTime: 2021-10-28 20:24:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Java Webd:\apacheServer\nginx\www\bilibili\src\js\loadFooter.js
@@ -57,7 +57,7 @@ define(["jquery","../libs/swiper-bundle"], ($,Swiper) => {
             })
             //判断 出现头像还是登陆注册
             let user = localStorage.getItem("userArr");
-            console.log(user);
+            
             if (user) {
                 $(".logoin-and-register").hide();
                 $(".user-info").show();

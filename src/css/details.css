@@ -180,6 +180,9 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
 .tabs-wrapper .tabs {
@@ -367,5 +370,20 @@
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
 
 }
-
+.backToTop {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  background-color: #23ade5;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 2px 22px 0 rgb(214 186 216 / 50%);
+  border-radius: 12px;
+  color: #f25d8e;
+  cursor: pointer;
+}
 /*# sourceMappingURL=details.css.map */
